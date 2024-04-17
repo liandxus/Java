@@ -1,0 +1,26 @@
+public class Demo5 {
+    public static void main(String[] args) {
+        /**
+         * 在数组的指定位置插值
+         * 数组的长度一旦被确定之后 就不能改变
+         */
+        int arr[] = {10,11,13,14,15};
+        int arr2[] = new int[arr.length+1];
+        int num = 12;
+        for (int i = 0; i < 3; i++) {
+            arr2[i] = arr[i];
+        }
+        arr2[2] = num;
+        for (int i = 3; i < arr2.length; i++) {
+            arr2[i] = arr[i-1];
+        }
+        System.out.println("添加完元素之前，旧数组的元素为:");
+        for (int i = 0; i< arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println("\n添加完元素之后，新数组的元素为:");
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i] + " ");
+        }
+    }
+}
